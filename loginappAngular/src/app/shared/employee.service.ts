@@ -18,15 +18,15 @@ export class EmployeeService {
      return this.http.get<any>(this.baseurl);
    }
    addEmployee(emp: Employee) {
-    return this.http.post(this.baseurl+'/add',emp,{headers:this.headers});
+    return this.http.post(this.baseurl+'/add/',emp,{headers:this.headers});
    }
    getEmployee(id: any) {
-    return this.http.get(this.baseurl+'/'+id);
+    return this.http.get(this.baseurl+'/single/'+id);
    }
    updateEmployee(id:any,emp: any) {
-    return this.http.put<any>(this.baseurl+'/update'+id,emp,{headers:this.headers});
+    return this.http.put<any>(this.baseurl+'/update/'+id,emp,{headers:this.headers});
    }
    deleteEmployee(id: any) {
-    return this.http.delete(this.baseurl+'/remove'+id);
+    return this.http.delete(this.baseurl+'/remove/'+id);
    }
 }
