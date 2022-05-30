@@ -24,9 +24,9 @@ export class EmployeeService {
     return this.http.get(this.baseurl+'/'+id);
    }
    updateEmployee(id:any,emp: any) {
-    return this.http.put<any>(this.baseurl+'/'+id,emp,{headers:this.headers});
+    return this.http.put<any>(this.baseurl+'/update'+id,emp,{headers:this.headers});
    }
    deleteEmployee(id: any) {
-    return this.http.delete(this.baseurl+'/'+id);
+    return this.http.delete(this.baseurl+'/remove'+id);
    }
 }
